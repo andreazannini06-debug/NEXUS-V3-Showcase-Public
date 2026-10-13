@@ -1,0 +1,29 @@
+
+name: Evidence Gate demo tests
+
+on:
+  push:
+    paths:
+      - 'examples/evidence-gate/**'
+      - '.github/workflows/evidence-gate.yml'
+  pull_request:
+    paths:
+      - 'examples/evidence-gate/**'
+      - '.github/workflows/evidence-gate.yml'
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Run demo unit tests
+        working-directory: examples/evidence-gate
+        run: python -m unittest discover -v -p 'test_*.py'
+      - name: Run synthetic example
+        working-directory: examples/evidence-gate
+        run: python evidence_gate.py --policy policy.json --report report.json --artifacts artifacts

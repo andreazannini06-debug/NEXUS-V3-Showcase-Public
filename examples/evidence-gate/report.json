@@ -1,0 +1,20 @@
+{
+  "repository": "example/synthetic-repo",
+  "actor": "demo-agent",
+  "task_id": "DEMO-1",
+  "execution_state": "completed",
+  "checks": [
+    {
+      "name": "unit-tests",
+      "status": "passed",
+      "artifact": "unit-tests.txt",
+      "sha256": "edd6edb56fc71f8a435092ad51e925eedeb3c03b93dfd80540d08694b0b543d8"
+    },
+    {
+      "name": "style-check",
+      "status": "passed",
+      "artifact": "style-check.txt",
+      "sha256": "fbe34e737cf024d354fd3a1c35c9babbfee78bb491084c69b7b8b54b922a1cc0"
+    }
+  ]
+}

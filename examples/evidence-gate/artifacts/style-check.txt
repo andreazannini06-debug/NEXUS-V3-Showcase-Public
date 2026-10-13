@@ -1,0 +1,1 @@
+Synthetic fixture: style-check passed (not a real tool run).

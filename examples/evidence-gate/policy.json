@@ -1,0 +1,5 @@
+{
+  "repository": "example/synthetic-repo",
+  "allowed_actors": ["demo-agent"],
+  "required_checks": ["unit-tests", "style-check"]
+}
